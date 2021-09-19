@@ -153,6 +153,12 @@ jobs:
           path: |
             app/libs/shadowsocks-libev.aar
           key: ${{ hashFiles('library/shadowsocks-libev/build.gradle.kts', 'shadowsocks_libev_status') }}
+      - uses: actions/upload-artifact@v2
+        with:
+          name: shadowsocks-libev.aar
+          path: |
+           app/libs/shadowsocks-libev.aar
+          key: ${{ hashFiles('library/shadowsocks-libev/build.gradle.kts', 'shadowsocks_libev_status') }}
       - name: Gradle cache
         uses: actions/cache@v2
         with:
